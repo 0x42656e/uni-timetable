@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:controller="controller.AdderController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
+          styleClass="root">
+
+<TextField fx:id="input1Tf" text="" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+<TextField fx:id="input2Tf" text="" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+<Button text="Add" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#handleAdd" />
+<Text fx:id="resultTxt" text="0" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+</GridPane>
