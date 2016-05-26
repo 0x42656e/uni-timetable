@@ -17,5 +17,16 @@
             <Image url="/res/logo.png"/>
         </image>
     </ImageView>
+        <Label text="Timetable System"/>
+    </HBox>
+    <ListView fx:id="studentsLv">
+        <placeholder>
+            <Label text="no students"/>
+        </placeholder>
+    </ListView>
+    <HBox alignment="center" spacing="10" styleClass="footer">
+        <Button text="Add Student"/>
+        <Button text="Remove Student" disable="true"/>
+        <Button text="Login" disable="true"/>
     </HBox>
 </VBox>

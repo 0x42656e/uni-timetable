@@ -1,10 +1,10 @@
 Launch the application
 [y] The UTS Logo is shown
-[?] The "Timetable System" heading is shown
-[?] "No students" is shown in the empty list
-[?] "Add Student" appears and is enabled
-[?] "Remove Student" appears and is disabled
-[?] "Login" appears and is disabled
+[y] The "Timetable System" heading is shown
+[y] "No students" is shown in the empty list
+[y] "Add Student" appears and is enabled
+[y] "Remove Student" appears and is disabled
+[y] "Login" appears and is disabled
 [?] The layout arranges the header, content and footer sections vertically
 [?] All colours and fonts are correct
 [?] The spacing and padding look like the screenshots
