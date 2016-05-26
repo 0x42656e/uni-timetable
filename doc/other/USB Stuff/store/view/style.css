@@ -1,0 +1,26 @@
+.root {
+  -fx-background-color: #ff6600;
+}
+.heading {
+	-fx-font-size: 32px;
+	-fx-fill: #ffffff;
+        -fx-background-color: #0099cc;
+        -fx-font: Arial;
+}
+
+.content {
+    -fx-padding: 50px;
+}
+
+.footer {
+    -fx-background-color: #252b2b;
+}
+
+Button {
+	-fx-text-fill: #ffffff;
+	-fx-background-color: #0099cc;
+}
+
+Button:hover {
+	-fx-background-color: #00bfff;
+}

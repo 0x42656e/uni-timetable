@@ -5,23 +5,23 @@ Launch the application
 [y] "Add Student" appears and is enabled
 [y] "Remove Student" appears and is disabled
 [y] "Login" appears and is disabled
-[?] The layout arranges the header, content and footer sections vertically
-[?] All colours and fonts are correct
-[?] The spacing and padding look like the screenshots
+[y] The layout arranges the header, content and footer sections vertically
+[y] All colours and fonts are correct
+[y] The spacing and padding look like the screenshots
 Click "Add Student"
-[?] The "Add Student" window is shown
-[?] The "Add new student" heading is shown
-[?] The student number label and text field are shown
-[?] The student name label and text field are shown
-[?] The attendance label, "Full Time" radio button and "Part Time" radio button are shown
-[?] The scholarship label and checkbox are shown
-[?] The "Cancel" button is shown and enabled
-[?] The "Add" button is shown and disabled
-[?] The layout arranges the header, content and footer sections vertically
-[?] The form is laid out in a GridPane
-[?] All colours and fonts are correct including the error message
-[?] The error message is included in the GridPane, centred horizontally spanning 2 columns
-[?] The spacing and padding look like the screenshots
+[y] The "Add Student" window is shown
+[y] The "Add new student" heading is shown
+[y] The student number label and text field are shown
+[y] The student name label and text field are shown
+[y] The attendance label, "Full Time" radio button and "Part Time" radio button are shown
+[y] The scholarship label and checkbox are shown
+[y] The "Cancel" button is shown and enabled
+[y] The "Add" button is shown and disabled
+[y] The layout arranges the header, content and footer sections vertically
+[y] The form is laid out in a GridPane
+[y] All colours and fonts are correct including the error message
+[y] The error message is included in the GridPane, centred horizontally spanning 2 columns
+[y] The spacing and padding look like the screenshots
 Click "Cancel"
 [?] The "Add Student" window is closed
 Click "Add Student" again

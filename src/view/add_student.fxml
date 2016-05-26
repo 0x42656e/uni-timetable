@@ -6,5 +6,45 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml">
+<?import com.sun.javafx.scene.control.skin.FXVKSkin.CharKey?>
+<VBox fx:controller="controller.Add_StudentController"
+      xmlns:fx="http://javafx.com/fxml" alignment="center" spacing="10"
+      styleClass="root">
+
+    <!--Header-->
+    <HBox alignment="center" spacing="10"  styleClass="heading">
+        <Label text="Add new student" styleClass="title"/>
+    </HBox>
+
+    <!--Content-->
+        <GridPane alignment="center" hgap="10" vgap="10" styleClass="content" maxWidth="350">
+            <padding><Insets top="10" bottom="10"></Insets></padding>
+            <Label text="Student number:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <Label text="Student name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <Label text="Attendance:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <Label text="Scholarship:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+
+            <TextField GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <TextField GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <HBox GridPane.rowIndex="2" GridPane.columnIndex="1">
+                <fx:define><ToggleGroup fx:id="attendanceTg"/></fx:define>
+                <RadioButton text="Full Time" userData="f" toggleGroup="$attendanceTg"/>
+                <RadioButton text="Part Time" userData="p" toggleGroup="$attendanceTg"/>
+            </HBox>
+            <CheckBox fx:id="scholarshipCb" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            <Label text="Student already exists" styleClass="error" GridPane.rowIndex="4"  GridPane.halignment="CENTER" GridPane.columnSpan="2" />
+        </GridPane>
+
+
+    <!--Footer-->
+    <HBox alignment="center" spacing="10" styleClass="footer">
+        <Button text="Cancel"/>
+        <Button text="Add" disable="true"/>
+    </HBox>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+
 </VBox>
