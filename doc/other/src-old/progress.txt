@@ -1,5 +1,5 @@
 Launch the application
-[y] The UTS Logo is shown
+[?] The UTS Logo is shown
 [?] The "Timetable System" heading is shown
 [?] "No students" is shown in the empty list
 [?] "Add Student" appears and is enabled

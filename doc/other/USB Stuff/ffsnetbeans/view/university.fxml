@@ -17,5 +17,22 @@
             <Image url="/res/logo.png"/>
         </image>
     </ImageView>
+        <Label text="Timetable System"/>
     </HBox>
+
+    <ListView fx:id="studentsLv" items="${controller.university.students}">
+        <placeholder>
+            <Label text="no students"/>
+        </placeholder>
+    </ListView>
+
+    <HBox alignment="center" spacing="10" styleClass="footer">
+        <Button text="Add Student" onAction="#handleAddStudent"/>
+        <Button text="Remove Student" onAction="#handleRemoveStudent" disable="false"/>
+        <Button text="Login" onAction="#handleLogin"/>
+    </HBox>
+    
+    	<stylesheets>
+		<URL value="@style.css"/>
+	</stylesheets>
 </VBox>
