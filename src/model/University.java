@@ -1,10 +1,13 @@
 package model;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.util.*;
 
 public class University {
     private LinkedList<Subject> subjects = new LinkedList<Subject>();
-    private LinkedList<Student> students = new LinkedList<Student>();
+    private ObservableList<Student> students = FXCollections.observableArrayList();
 
     public University() {
         Subject ap = new Subject(48024, "Applications Programming");
@@ -26,7 +29,7 @@ public class University {
         return subjects;
     }
 
-    public LinkedList<Student> getStudents() {
+    public ObservableList<Student> getStudents() {
         return students;
     }
 
@@ -56,5 +59,12 @@ public class University {
             if (subject.matches(number))
                 return subject;
         return null;
+    }
+    //##### I ADDED #####
+    public boolean isStudent(String number) {
+        for (Student student : students)
+            if (student.matches(number))
+                return true;
+        return false;
     }
 }

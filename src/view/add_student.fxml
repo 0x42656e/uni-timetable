@@ -29,18 +29,18 @@
 
             <HBox GridPane.rowIndex="2" GridPane.columnIndex="1">
                 <fx:define><ToggleGroup fx:id="attendanceTg"/></fx:define>
-                <RadioButton text="Full Time" userData="f" toggleGroup="$attendanceTg"/>
-                <RadioButton text="Part Time" userData="p" toggleGroup="$attendanceTg"/>
+                <RadioButton text="Full Time" userData="Full Time" toggleGroup="$attendanceTg"/>
+                <RadioButton text="Part Time" userData="Part Time" toggleGroup="$attendanceTg"/>
             </HBox>
             <CheckBox fx:id="scholarshipCb" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
-            <Label text="Student already exists" styleClass="error" GridPane.rowIndex="4"  GridPane.halignment="CENTER" GridPane.columnSpan="2" />
+            <Label fx:id="errorLb" text="Student already exists" styleClass="error" GridPane.rowIndex="4"  GridPane.halignment="CENTER" GridPane.columnSpan="2" visible="false"/>
         </GridPane>
 
 
     <!--Footer-->
     <HBox alignment="center" spacing="10" styleClass="footer">
         <Button text="Cancel" onAction="#handleCancel"/>
-        <Button fx:id="addBtn" text="Add" disable="true"/>
+        <Button fx:id="addBtn" text="Add" disable="true" onAction="#handleAdd"/>
     </HBox>
 
     <stylesheets>

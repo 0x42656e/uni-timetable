@@ -33,23 +33,23 @@ Select "Full Time"
 [y] The "Add" button becomes enabled
 Select the "Scholarship" checkbox
 Delete the student number and the re-enter it
-[?] The "Add" button becomes disabled and then re-enabled
+[y] The "Add" button becomes disabled and then re-enabled
 Delete the student name and then re-enter it
-[?] The "Add" button becomes disabled and then re-enabled
+[y] The "Add" button becomes disabled and then re-enabled
 Click the "Add" button
-[?] The "Add Student" window is closed
-[?] "12345678 - Bianca Sladen" is shown in the student list in the university window
+[y] The "Add Student" window is closed
+[y] "12345678 - Bianca Sladen" is shown in the student list in the university window
 Click the "Add Student" button
 Enter details "12345678", "Hugo Aitken", "Full Time" and no scholarship
 Click "Add"
-[?] The window does not close and the error "Student already exists" is shown
+[y] The window does not close and the error "Student already exists" is shown
 Change the student number to "49287512" and click "Add"
-[?] The "Add Student" window is closed and "49287512 - Hugo Aitken" is immediately added to the student list in the university window
+[y] The "Add Student" window is closed and "49287512 - Hugo Aitken" is immediately added to the student list in the university window
 Add a student "23232323", "Jessica Sneddon", "Part Time", no scholarship
 Add a student "11111111", "Dakota Cavill", "Full Time", scholarship
-[?] These two students are immediately added to the student list in the university window
+[y] These two students are immediately added to the student list in the university window
 Select Bianca Sladen from the list
-[?] At this moment, the "Remove Student" and "Login" buttons become enabled
+[y] At this moment, the "Remove Student" and "Login" buttons become enabled
 Click "Login"
 [?] The "Student" window is shown
 [?] The "Logged in as Bianca Sladen" heading is shown

@@ -9,14 +9,15 @@ import javafx.beans.binding.*;
 import javafx.beans.binding.BooleanBinding;
 import javafx.beans.property.*;
 
-public class Add_StudentController extends Controller<Student> {
+public class Add_StudentController extends Controller<University> {
+    public final University getUniversity() {return model;}
 
     @FXML TextField numberTf;
     @FXML TextField nameTf;
     @FXML Button addBtn;
     @FXML ToggleGroup attendanceTg;
     @FXML CheckBox scholarshipCb;
-    boolean ben = true;
+    @FXML Label errorLb;
 
     @FXML
     private void initialize() {
@@ -24,12 +25,20 @@ public class Add_StudentController extends Controller<Student> {
          nameTf.textProperty().isEmpty());
 
         addBtn.disableProperty().bind(attendanceTg.selectedToggleProperty().isNull() .or(booleanBind));
+    }
 
+    @FXML
+    public void handleAdd() throws Exception {
+        if (model.isStudent(numberTf.getText())) {
+            errorLb.setVisible(true);
+            return;
+        }
+        getUniversity().addStudent(numberTf.getText(), nameTf.getText(), attendanceTg.getSelectedToggle().getUserData().toString(), scholarshipCb.isSelected());
+        stage.close();
     }
 
     @FXML
     public void handleCancel() throws Exception {
-
         stage.close();
     }
 }

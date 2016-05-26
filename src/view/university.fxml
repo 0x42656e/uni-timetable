@@ -24,7 +24,7 @@
     <!--Content-->
     <VBox alignment="center">
         <padding><Insets top="10" bottom="10"></Insets></padding>
-    <ListView fx:id="studentsLv" maxWidth="400" maxHeight="300" styleClass="content">
+    <ListView fx:id="studentsLv" maxWidth="400" maxHeight="300" styleClass="content" items="${controller.university.students}">
         <placeholder>
             <Label text="no students"/>
         </placeholder>
@@ -34,9 +34,9 @@
     <!--Footer-->
     <HBox alignment="center" spacing="10" styleClass="footer">
 
-        <Button text="Add Student" onAction="#handleAddStudent"/>
-        <Button text="Remove Student" disable="true"/>
-        <Button text="Login" disable="true"/>
+        <Button text="Add Student" onAction="#handleAdd"/>
+        <Button fx:id="removeBtn" text="Remove Student" disable="true" onAction="#handleRemove"/>
+        <Button fx:id="loginBtn" text="Login" disable="true" onAction="#handleLogin"/>
     </HBox>
 
     <stylesheets>
