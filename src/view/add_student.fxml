@@ -24,8 +24,8 @@
             <Label text="Attendance:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
             <Label text="Scholarship:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
 
-            <TextField GridPane.rowIndex="0" GridPane.columnIndex="1"/>
-            <TextField GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <TextField fx:id="numberTf" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <TextField fx:id="nameTf" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
 
             <HBox GridPane.rowIndex="2" GridPane.columnIndex="1">
                 <fx:define><ToggleGroup fx:id="attendanceTg"/></fx:define>
@@ -39,8 +39,8 @@
 
     <!--Footer-->
     <HBox alignment="center" spacing="10" styleClass="footer">
-        <Button text="Cancel"/>
-        <Button text="Add" disable="true"/>
+        <Button text="Cancel" onAction="#handleCancel"/>
+        <Button fx:id="addBtn" text="Add" disable="true"/>
     </HBox>
 
     <stylesheets>

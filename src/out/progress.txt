@@ -21,9 +21,9 @@ Click "Add Student"
 [y] The form is laid out in a GridPane
 [y] All colours and fonts are correct including the error message
 [y] The error message is included in the GridPane, centred horizontally spanning 2 columns
-[?] The spacing and padding look like the screenshots
+[y] The spacing and padding look like the screenshots
 Click "Cancel"
-[?] The "Add Student" window is closed
+[y] The "Add Student" window is closed
 Click "Add Student" again
 Enter student number 12345678
 [?] The "Add" button remains disabled

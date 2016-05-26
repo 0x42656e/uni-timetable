@@ -23,14 +23,14 @@ Click "Add Student"
 [y] The error message is included in the GridPane, centred horizontally spanning 2 columns
 [y] The spacing and padding look like the screenshots
 Click "Cancel"
-[?] The "Add Student" window is closed
+[y] The "Add Student" window is closed
 Click "Add Student" again
 Enter student number 12345678
-[?] The "Add" button remains disabled
+[y] The "Add" button remains disabled
 Enter student name Bianca Sladen
-[?] The "Add" button remains disabled
+[y] The "Add" button remains disabled
 Select "Full Time"
-[?] The "Add" button becomes enabled
+[y] The "Add" button becomes enabled
 Select the "Scholarship" checkbox
 Delete the student number and the re-enter it
 [?] The "Add" button becomes disabled and then re-enabled
