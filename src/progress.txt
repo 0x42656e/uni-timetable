@@ -51,8 +51,8 @@ Add a student "11111111", "Dakota Cavill", "Full Time", scholarship
 Select Bianca Sladen from the list
 [y] At this moment, the "Remove Student" and "Login" buttons become enabled
 Click "Login"
-[?] The "Student" window is shown
-[?] The "Logged in as Bianca Sladen" heading is shown
+[y] The "Student" window is shown
+[y] The "Logged in as Bianca Sladen" heading is shown
 [?] The student number label and text (12345678) is shown
 [?] The student attendance label and text ("Full Time") is shown
 [?] The student scholarship label and text ("Yes") is shown

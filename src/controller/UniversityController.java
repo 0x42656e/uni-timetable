@@ -6,9 +6,6 @@ import javafx.scene.control.*;
 import javafx.stage.*;
 import model.*;
 
-/**
- * Created by epicpc on 5/26/16.
- */
 public class UniversityController extends Controller<University> {
 
     public final University getUniversity() {return model;}

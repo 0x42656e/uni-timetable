@@ -10,7 +10,7 @@ public class University {
     private ObservableList<Student> students = FXCollections.observableArrayList();
 
     public University() {
-        students.add(new Student(this, "12345678", "Benjamin Franzi", "Full Time", true));
+        //students.add(new Student(this, "12345678", "Benjamin Franzi", "Full Time", true));
         Subject ap = new Subject(48024, "Applications Programming");
         ap.addActivity("Lec1", 1, "Wed", 18, 1, "CB11.00.405", 200);
         ap.addActivity("Cmp1", 1, "Wed", 19, 2, "CB11.B1.403", 2);

@@ -6,6 +6,8 @@ import javafx.scene.control.*;
 import model.Student;
 
 public class StudentController extends Controller<Student> {
+    public final Student getStudent() {return model;}
+
     @FXML Button logoutBtn;
 
     public void handleLogout() {

@@ -21,6 +21,7 @@ public class Student {
     public University getUniversity() { return university; }
     public String getNumber() { return number; }
     public String getName() { return name; }
+    public String getNameTitle() { return "Logged in as " + name; }
     public String getAttendance() { return attendance; }
     public boolean getScholarship() { return scholarship; }
     public LinkedList<Activity> getActivities() { return activities; }

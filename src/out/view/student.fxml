@@ -15,7 +15,7 @@
 
     <!--Header-->
     <HBox alignment="center" spacing="10"  styleClass="heading">
-        <Label text="Loggd in as ..." styleClass="title"/>
+        <Label text="${controller.student.nameTitle}" styleClass="title"/>
         <GridPane styleClass="content" alignment="center" hgap="10" vgap="10">
             <padding><Insets top="10" bottom="10"></Insets></padding>
             <Label text="Student number:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
