@@ -7,7 +7,47 @@
 <?import javafx.scene.control.cell.*?> 
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<?import javafx.collections.*?> 
+<?import javafx.collections.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml">
+<VBox fx:controller="controller.StudentController"
+      xmlns:fx="http://javafx.com/fxml" alignment="center" spacing="10"
+      styleClass="root">
+
+    <!--Header-->
+    <HBox alignment="center" spacing="10"  styleClass="heading">
+        <Label text="Loggd in as ..." styleClass="title"/>
+        <GridPane styleClass="content" alignment="center" hgap="10" vgap="10">
+            <padding><Insets top="10" bottom="10"></Insets></padding>
+            <Label text="Student number:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <Label text="Attendance:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <Label text="Scholarship:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+
+            <Text text="null" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Text text="null" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Text text="null" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        </GridPane>
+    </HBox>
+
+    <!--Content-->
+    <VBox>
+        <!-- Part 1-->
+        <Label text="My Activities" styleClass="title"/>
+        <TableView prefHeight="200"/>
+        <!-- Part 2-->
+        <HBox>
+            <Label text="Enrol into subject" styleClass="title"/>
+        </HBox>
+        <TableView prefHeight="200"/>
+    </VBox>
+
+
+    <!--Footer-->
+    <HBox alignment="center" spacing="10" styleClass="footer">
+        <Button fx:id="logoutBtn" text="Logout" onAction="#handleLogout"/>
+    </HBox>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+
 </VBox>

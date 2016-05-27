@@ -49,7 +49,7 @@ Add a student "23232323", "Jessica Sneddon", "Part Time", no scholarship
 Add a student "11111111", "Dakota Cavill", "Full Time", scholarship
 [y] These two students are immediately added to the student list in the university window
 Select Bianca Sladen from the list
-[?] At this moment, the "Remove Student" and "Login" buttons become enabled
+[y] At this moment, the "Remove Student" and "Login" buttons become enabled
 Click "Login"
 [?] The "Student" window is shown
 [?] The "Logged in as Bianca Sladen" heading is shown

@@ -45,6 +45,6 @@ public class UniversityController extends Controller<University> {
 
     @FXML
     public void handleLogin() throws Exception {
-
+        ViewLoader.showStage(getSelectedStudent(), "/view/student.fxml", "Student", new Stage());
     }
 }
