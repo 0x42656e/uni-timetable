@@ -33,15 +33,43 @@
         <!-- Part 1-->
         <HBox spacing="10" alignment="CENTER_LEFT">
             <Label text="My Activities" styleClass="title"/>
-            <Button fx:id="withdrawBtn" text="Withdraw"/>
+            <Button fx:id="withdrawBtn" text="Withdraw" disable="true" onAction="#handleEnrol"/>
         </HBox>
-        <TableView prefHeight="200"/>
+        <TableView prefHeight="200">
+            <columns>
+                <TableColumn text="Subject"/>
+                <TableColumn text="Group"/>
+                <TableColumn text="Activity"/>
+                <TableColumn text="Day"/>
+                <TableColumn text="Start"/>
+                <TableColumn text="Duration"/>
+                <TableColumn text="Room"/>
+                <TableColumn text="Capacity"/>
+                <TableColumn text="Enrolled"/>
+            </columns>
+            <placeholder>
+                <Label text="Not enrolled in any activities"/>
+            </placeholder>
+        </TableView>
         <!-- Part 2-->
         <HBox  spacing="10" alignment="CENTER_LEFT">
             <Label text="Enrol into subject" styleClass="title"/>
-            <Button fx:id="EnrolBtn" text="Enrol"/>
+            <ComboBox promptText="choose" items="${controller.student.university.subjects}"/>
+            <Button fx:id="EnrolBtn" text="Enrol" disable="true" onAction="#handleEnrol"/>
         </HBox>
-        <TableView prefHeight="200"/>
+        <TableView prefHeight="200">
+            <columns>
+                <TableColumn text="Subject"/>
+                <TableColumn text="Group"/>
+                <TableColumn text="Activity"/>
+                <TableColumn text="Day"/>
+                <TableColumn text="Start"/>
+                <TableColumn text="Duration"/>
+                <TableColumn text="Room"/>
+                <TableColumn text="Capacity"/>
+                <TableColumn text="Enrolled"/>
+            </columns>
+        </TableView>
     </VBox>
 
 

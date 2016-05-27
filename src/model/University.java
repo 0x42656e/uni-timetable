@@ -6,7 +6,7 @@ import javafx.collections.ObservableList;
 import java.util.*;
 
 public class University {
-    private LinkedList<Subject> subjects = new LinkedList<Subject>();
+    private ObservableList<Subject> subjects = FXCollections.observableArrayList();
     private ObservableList<Student> students = FXCollections.observableArrayList();
 
     public University() {
@@ -26,7 +26,7 @@ public class University {
         subjects.add(wsd);
     }
 
-    public LinkedList<Subject> getSubjects() {
+    public ObservableList<Subject> getSubjects() {
         return subjects;
     }
 
