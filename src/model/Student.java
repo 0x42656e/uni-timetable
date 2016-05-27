@@ -23,7 +23,10 @@ public class Student {
     public String getName() { return name; }
     public String getNameTitle() { return "Logged in as " + name; }
     public String getAttendance() { return attendance; }
-    public boolean getScholarship() { return scholarship; }
+    public String getScholarship() {
+        if (scholarship) return "Yes";
+        return "No";
+    }
     public LinkedList<Activity> getActivities() { return activities; }
 
     public boolean isEnrolledIn(Activity activity) {

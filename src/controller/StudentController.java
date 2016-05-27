@@ -10,6 +10,14 @@ public class StudentController extends Controller<Student> {
 
     @FXML Button logoutBtn;
 
+    public void handleWithdraw() {
+
+    }
+
+    public void handleEnrol() {
+
+    }
+
     public void handleLogout() {
         stage.close();
     }

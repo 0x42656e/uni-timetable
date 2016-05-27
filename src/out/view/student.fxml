@@ -22,20 +22,24 @@
             <Label text="Attendance:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
             <Label text="Scholarship:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
 
-            <Text text="null" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
-            <Text text="null" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
-            <Text text="null" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <Text text="${controller.student.number}" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Text text="${controller.student.attendance}" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Text text="${controller.student.scholarship}" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
         </GridPane>
     </HBox>
 
     <!--Content-->
     <VBox>
         <!-- Part 1-->
-        <Label text="My Activities" styleClass="title"/>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="My Activities" styleClass="title"/>
+            <Button fx:id="withdrawBtn" text="Withdraw"/>
+        </HBox>
         <TableView prefHeight="200"/>
         <!-- Part 2-->
-        <HBox>
+        <HBox  spacing="10" alignment="CENTER_LEFT">
             <Label text="Enrol into subject" styleClass="title"/>
+            <Button fx:id="EnrolBtn" text="Enrol"/>
         </HBox>
         <TableView prefHeight="200"/>
     </VBox>

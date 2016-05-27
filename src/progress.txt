@@ -53,9 +53,9 @@ Select Bianca Sladen from the list
 Click "Login"
 [y] The "Student" window is shown
 [y] The "Logged in as Bianca Sladen" heading is shown
-[?] The student number label and text (12345678) is shown
-[?] The student attendance label and text ("Full Time") is shown
-[?] The student scholarship label and text ("Yes") is shown
+[y] The student number label and text (12345678) is shown
+[y] The student attendance label and text ("Full Time") is shown
+[y] The student scholarship label and text ("Yes") is shown
 [?] The "Withdraw" and "Enrol" buttons are both shown and disabled. The "Logout" button is shown and enabled.
 [?] The "My Activities" table shows column headings: Subject, Group, Activity, Day, Start, Duration, Room, Capacity, Enrolled.
 [?] The "My Activities" table is empty and shows "Not enrolled in any activities"
