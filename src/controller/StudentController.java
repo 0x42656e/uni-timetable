@@ -35,6 +35,13 @@ public class StudentController extends Controller<Student> {
     public void initialize() {
         subSubjectClm.setCellValueFactory(cellData -> cellData.getValue().subjectProperty().asString());
         subGroupClm.setCellValueFactory(cellData -> cellData.getValue().groupProperty());
+        subActivityClm.setCellValueFactory(cellData -> cellData.getValue().numberProperty().asString());
+        subDayClm.setCellValueFactory(cellData -> cellData.getValue().dayProperty());
+        subStartClm.setCellValueFactory(cellData -> cellData.getValue().startProperty().asString());
+        subDurationClm.setCellValueFactory(cellData -> cellData.getValue().durationProperty().asString());
+        subRoomClm.setCellValueFactory(cellData -> cellData.getValue().roomProperty());
+        subCapacityClm.setCellValueFactory(cellData -> cellData.getValue().capacityProperty().asString());
+        subEnrolledClm.setCellValueFactory(cellData -> cellData.getValue().enrolledProperty().asString());
 
         subjectCb.getSelectionModel().selectedItemProperty().addListener(new ChangeListener() {
             @Override

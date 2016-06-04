@@ -1,6 +1,7 @@
 package model;
 
 import javafx.beans.property.*;
+import org.omg.PortableInterceptor.INACTIVE;
 
 public class Activity {
     private Subject subject;
@@ -40,6 +41,14 @@ public class Activity {
          return new SimpleIntegerProperty(subject.getNumber());
     }
     public StringProperty groupProperty() {return group;}
+    public IntegerProperty numberProperty() {return number;}
+    public StringProperty dayProperty() {return day;}
+    public IntegerProperty startProperty() {return start;}
+    public IntegerProperty durationProperty() {return duration;}
+    public StringProperty roomProperty() {return room;}
+    public IntegerProperty capacityProperty() {return capacity;}
+    public IntegerProperty enrolledProperty() {return enrolled;}
+
 
     public boolean canEnrol() {
         return enrolled.get() < capacity.get();
