@@ -1,11 +1,14 @@
 package model;
 
+import javafx.collections.FXCollections;
+import javafx.collections.*;
+
 import java.util.*;
 
 public class Subject {
     private int number;
     private String name;
-    private LinkedList<Activity> activities = new LinkedList<Activity>();
+    private ObservableList<Activity> activities = FXCollections.observableArrayList();
 
     public Subject(int number, String name) {
         this.number = number;
@@ -16,7 +19,7 @@ public class Subject {
         return number;
     }
 
-    public LinkedList<Activity> getActivities() {
+    public ObservableList<Activity> getActivities() {
         return activities;
     }
 

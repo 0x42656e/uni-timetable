@@ -54,20 +54,20 @@
         <!-- Part 2-->
         <HBox  spacing="10" alignment="CENTER_LEFT">
             <Label text="Enrol into subject" styleClass="title"/>
-            <ComboBox promptText="choose" items="${controller.student.university.subjects}"/>
+            <ComboBox fx:id="subjectCb" promptText="choose" items="${controller.student.university.subjects}"/>
             <Button fx:id="EnrolBtn" text="Enrol" disable="true" onAction="#handleEnrol"/>
         </HBox>
-        <TableView prefHeight="200">
+        <TableView fx:id="subjectsTv" prefHeight="200">
             <columns>
-                <TableColumn text="Subject"/>
-                <TableColumn text="Group"/>
-                <TableColumn text="Activity"/>
-                <TableColumn text="Day"/>
-                <TableColumn text="Start"/>
-                <TableColumn text="Duration"/>
-                <TableColumn text="Room"/>
-                <TableColumn text="Capacity"/>
-                <TableColumn text="Enrolled"/>
+                <TableColumn fx:id="subSubjectClm" text="Subject"/>
+                <TableColumn fx:id="subGroupClm" text="Group"/>
+                <TableColumn fx:id="subActivityClm" text="Activity"/>
+                <TableColumn fx:id="subDayClm" text="Day"/>
+                <TableColumn fx:id="subStartClm" text="Start"/>
+                <TableColumn fx:id="subDurationClm" text="Duration"/>
+                <TableColumn fx:id="subRoomClm" text="Room"/>
+                <TableColumn fx:id="subCapacityClm" text="Capacity"/>
+                <TableColumn fx:id="subEnrolledClm" text="Enrolled"/>
             </columns>
         </TableView>
     </VBox>
