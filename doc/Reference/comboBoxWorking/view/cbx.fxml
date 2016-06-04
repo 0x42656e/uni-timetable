@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+
+<VBox fx:controller="controller.cbxController"
+      xmlns:fx="http://javafx.com/fxml" alignment="center"  spacing="10"
+      styleClass="root">
+
+    <HBox alignment="center" spacing="10"  styleClass="heading">
+        <Label text="Ben is Cool" styleClass="title"/>
+    </HBox>
+
+    <HBox>
+        <ComboBox promptText="choose!" fx:id="opusCb"/>
+    </HBox>
+
+    <Text fx:id="opusTx" text="null"/>
+    <TableView fx:id="cbxTv">
+        <columns>
+            <TableColumn fx:id="nameClm" text="Name">
+            </TableColumn>
+            <TableColumn fx:id="xClm" text="X">
+            </TableColumn>
+            <TableColumn fx:id="yClm" text="Y">
+            </TableColumn>
+        </columns>
+    </TableView>
+
+</VBox>
