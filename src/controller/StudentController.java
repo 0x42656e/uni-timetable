@@ -77,21 +77,16 @@ public class StudentController extends Controller<Student> {
                 subjectsTv.setItems(getSubjectList(newValue).getActivities());
             }
         });
-
         studentsTv.setItems(model.getActivities());
 
 
 
-
-        //SETUP THE DISABLED PROPERTY FOR WITHDRAW AND ENROL
-
-        //ObservableBooleanValue booleanWithdrawBtn = new SimpleBooleanProperty(studentsTv.getSelectionModel().isEmpty());
-
-
-        //withdrawBtn.disableProperty().bind(booleanWithdrawBtn);
-
-        //SETUP THE DISABLED PROPERTY FOR WITHDRAW AND ENROL
-
+        studentsTv.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldSubject, newSubject) -> withdrawBtn.setDisable(newSubject == null)
+        );
+        subjectsTv.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldSubject, newSubject) -> enrolBtn.setDisable(newSubject == null)
+        );
     }
 
     private Subject getSubjectList(Object value) {

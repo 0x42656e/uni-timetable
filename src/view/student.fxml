@@ -33,7 +33,7 @@
         <!-- Part 1-->
         <HBox spacing="10" alignment="CENTER_LEFT">
             <Label text="My Activities" styleClass="title"/>
-            <Button fx:id="withdrawBtn" text="Withdraw" disable="false" onAction="#handleWithdraw"/>
+            <Button fx:id="withdrawBtn" text="Withdraw" disable="true" onAction="#handleWithdraw"/>
         </HBox>
         <TableView fx:id="studentsTv" prefHeight="200">
             <columns>
@@ -55,7 +55,7 @@
         <HBox  spacing="10" alignment="CENTER_LEFT">
             <Label text="Enrol into subject" styleClass="title"/>
             <ComboBox fx:id="subjectCb" promptText="choose" items="${controller.student.university.subjects}"/>
-            <Button fx:id="enrolBtn" text="Enrol" disable="false" onAction="#handleEnrol"/>
+            <Button fx:id="enrolBtn" text="Enrol" disable="true" onAction="#handleEnrol"/>
         </HBox>
         <TableView fx:id="subjectsTv" prefHeight="200">
             <columns>
