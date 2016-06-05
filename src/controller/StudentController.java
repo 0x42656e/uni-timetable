@@ -84,9 +84,11 @@ public class StudentController extends Controller<Student> {
         studentsTv.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldSubject, newSubject) -> withdrawBtn.setDisable(newSubject == null)
         );
+
         subjectsTv.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldSubject, newSubject) -> enrolBtn.setDisable(newSubject == null)
+                (observable, oldSubject, newSubject) -> enrolBtn.setDisable(newSubject == null || !(getSelectedActivity().canEnrol()) || doesModelEnrolled())
         );
+
     }
 
     private Subject getSubjectList(Object value) {
@@ -102,6 +104,12 @@ public class StudentController extends Controller<Student> {
     private Activity getSelectedActivity() {
         return subjectsTv.getSelectionModel().getSelectedItem();
     }
+    private boolean doesModelEnrolled() {
+        for (Activity x : model.getActivities()) {
+            if (x == getSelectedActivity()) return true;
+        }
+        return false;
+    }
 
     @FXML
     public void handleWithdraw() {
@@ -111,7 +119,9 @@ public class StudentController extends Controller<Student> {
     @FXML
     public void handleEnrol() {
         model.enrol(getSelectedActivity());
-        subjectsTv.getSelectionModel().clearSelection();
+        enrolBtn.setDisable(true);
+        //***IT ASKED TO KEEP IT SELECTED (FUTHER RESEARCH REQUIRED)***//
+        //subjectsTv.getSelectionModel().clearSelection();
     }
 
     @FXML

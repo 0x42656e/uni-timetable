@@ -1,6 +1,7 @@
 package model;
 
 import javafx.beans.binding.ObjectExpression;
+import javafx.beans.value.ObservableBooleanValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -46,6 +47,19 @@ public class Student {
         // in an existing activity with the same subject and group.
         // If so, the student should be withdrawn from that activity first.
         // See Lecture 5 for hints.
+
+        ObservableList<Activity> toRemove = FXCollections.observableArrayList();
+        for (Activity x : activities) {
+            if (x.getGroup() == activity.getGroup() && x.getSubjectNumber() == activity.getSubjectNumber()) {
+                toRemove.add(x);
+            }
+        }
+        for (Activity x : toRemove) {
+            x.withdraw();
+        }
+
+        activities.removeAll(toRemove);
+
         activities.add(activity);
         activity.enrol();
     }
@@ -53,6 +67,13 @@ public class Student {
     public void withdraw(Activity activity) {
         activities.remove(activity);
         activity.withdraw();
+    }
+
+    public void withdrawAll() {
+        for (Activity x : activities) {
+            x.withdraw();
+        }
+        activities.removeAll();
     }
 
     // This lookup function should be useful to check if a student is
