@@ -1,5 +1,9 @@
 package model;
 
+import javafx.beans.binding.ObjectExpression;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.util.*;
 
 public class Student {
@@ -8,7 +12,7 @@ public class Student {
     private String name;
     private String attendance;
     private boolean scholarship;
-    private LinkedList<Activity> activities = new LinkedList<Activity>();
+    private ObservableList<Activity> activities = FXCollections.observableArrayList();
 
     public Student(University university, String number, String name, String attendance, boolean scholarship) {
         this.university = university;
@@ -27,7 +31,7 @@ public class Student {
         if (scholarship) return "Yes";
         return "No";
     }
-    public LinkedList<Activity> getActivities() { return activities; }
+    public ObservableList<Activity> getActivities() { return activities; }
 
     public boolean isEnrolledIn(Activity activity) {
         return activities.contains(activity);

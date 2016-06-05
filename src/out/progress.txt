@@ -68,8 +68,8 @@ Click "Login"
 [?] All colours and fonts are correct
 [?] The spacing and padding look like the screenshots
 Select "48024 Applications Programming" from the subjects ComboBox
-[?] The Subject column shows the correct subject number (and ONLY the subject number) of each activity in the selected subject
-[?] The Group, Activity, Day, Start, Duration, Room, Capacity and Enrolled columns show the corresponding properties from the Activity model data for each activity in the subject
+[y] The Subject column shows the correct subject number (and ONLY the subject number) of each activity in the selected subject
+[y] The Group, Activity, Day, Start, Duration, Room, Capacity and Enrolled columns show the corresponding properties from the Activity model data for each activity in the subject
 Select Lec1 activity 1 from the subject activities table
 [?] The "Enrol" button becomes enabled
 Click "Enrol" and make sure Lec1 activity 1 is still selected in the table

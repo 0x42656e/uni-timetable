@@ -15,11 +15,23 @@ import model.University;
 public class StudentController extends Controller<Student> {
     public final Student getStudent() {return model;}
 
+    @FXML Button enrolBtn;
     @FXML Button logoutBtn;
 
     @FXML ComboBox subjectCb;
 
+    @FXML TableView<Activity> studentsTv;
     @FXML TableView<Activity> subjectsTv;
+
+    @FXML TableColumn<Activity, String> stdSubjectClm;
+    @FXML TableColumn<Activity, String> stdGroupClm;
+    @FXML TableColumn<Activity, String> stdActivityClm;
+    @FXML TableColumn<Activity, String> stdDayClm;
+    @FXML TableColumn<Activity, String> stdStartClm;
+    @FXML TableColumn<Activity, String> stdDurationClm;
+    @FXML TableColumn<Activity, String> stdRoomClm;
+    @FXML TableColumn<Activity, String> stdCapacityClm;
+    @FXML TableColumn<Activity, String> stdEnrolledClm;
 
     @FXML TableColumn<Activity, String> subSubjectClm;
     @FXML TableColumn<Activity, String> subGroupClm;
@@ -33,6 +45,16 @@ public class StudentController extends Controller<Student> {
 
     @FXML
     public void initialize() {
+        stdSubjectClm.setCellValueFactory(cellData -> cellData.getValue().subjectProperty().asString());
+        stdGroupClm.setCellValueFactory(cellData -> cellData.getValue().groupProperty());
+        stdActivityClm.setCellValueFactory(cellData -> cellData.getValue().numberProperty().asString());
+        stdDayClm.setCellValueFactory(cellData -> cellData.getValue().dayProperty());
+        stdStartClm.setCellValueFactory(cellData -> cellData.getValue().startProperty().asString());
+        stdDurationClm.setCellValueFactory(cellData -> cellData.getValue().durationProperty().asString());
+        stdRoomClm.setCellValueFactory(cellData -> cellData.getValue().roomProperty());
+        stdCapacityClm.setCellValueFactory(cellData -> cellData.getValue().capacityProperty().asString());
+        stdEnrolledClm.setCellValueFactory(cellData -> cellData.getValue().enrolledProperty().asString());
+
         subSubjectClm.setCellValueFactory(cellData -> cellData.getValue().subjectProperty().asString());
         subGroupClm.setCellValueFactory(cellData -> cellData.getValue().groupProperty());
         subActivityClm.setCellValueFactory(cellData -> cellData.getValue().numberProperty().asString());
@@ -50,6 +72,11 @@ public class StudentController extends Controller<Student> {
                 subjectsTv.setItems(getSubjectList(newValue).getActivities());
             }
         });
+
+        studentsTv.setItems(model.getActivities());
+
+        enrolBtn.disableProperty().bind(subjectsTv.selectionModelProperty().isNull());
+
     }
 
     private Subject getSubjectList(Object value) {
@@ -59,12 +86,20 @@ public class StudentController extends Controller<Student> {
         return null;
     }
 
-    public void handleWithdraw() {
+    private Activity getSelectedWithdraw() {
+        return studentsTv.getSelectionModel().getSelectedItem();
+    }
+    private Activity getSelectedActivity() {
+        return subjectsTv.getSelectionModel().getSelectedItem();
+    }
 
+    public void handleWithdraw() {
+        model.withdraw(getSelectedWithdraw());
     }
 
     public void handleEnrol() {
-
+        model.enrol(getSelectedActivity());
+        subjectsTv.getSelectionModel().clearSelection();
     }
 
     public void handleLogout() {
