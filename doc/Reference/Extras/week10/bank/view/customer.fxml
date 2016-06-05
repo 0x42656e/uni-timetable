@@ -3,7 +3,7 @@
 <?import java.net.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.control.cell.*?> 
+<?import javafx.scene.control.cell.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -31,10 +31,11 @@
 		</columns>
 	</TableView>
 	<HBox alignment="center" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2">
+		<Button fx:id="removeBtn" disable="true" text="Remove Account" onAction="#handleRemove"/>
 		<Button fx:id="viewAccountBtn" disable="true" text="View Account" onAction="#handleViewAccount"/>
 		<Button text="Add Account" onAction="#handleAddAccount"/>
 	</HBox>
-	
+
 	<stylesheets><URL value="@style.css"/></stylesheets>
-	
+
 </VBox>

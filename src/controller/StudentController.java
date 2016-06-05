@@ -1,7 +1,11 @@
 package controller;
 
 import au.edu.uts.ap.javafx.Controller;
+import javafx.beans.binding.Bindings;
+import javafx.beans.binding.BooleanBinding;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableBooleanValue;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,6 +19,7 @@ import model.University;
 public class StudentController extends Controller<Student> {
     public final Student getStudent() {return model;}
 
+    @FXML Button withdrawBtn;
     @FXML Button enrolBtn;
     @FXML Button logoutBtn;
 
@@ -75,7 +80,17 @@ public class StudentController extends Controller<Student> {
 
         studentsTv.setItems(model.getActivities());
 
-        enrolBtn.disableProperty().bind(subjectsTv.selectionModelProperty().isNull());
+
+
+
+        //SETUP THE DISABLED PROPERTY FOR WITHDRAW AND ENROL
+
+        //ObservableBooleanValue booleanWithdrawBtn = new SimpleBooleanProperty(studentsTv.getSelectionModel().isEmpty());
+
+
+        //withdrawBtn.disableProperty().bind(booleanWithdrawBtn);
+
+        //SETUP THE DISABLED PROPERTY FOR WITHDRAW AND ENROL
 
     }
 
@@ -93,15 +108,18 @@ public class StudentController extends Controller<Student> {
         return subjectsTv.getSelectionModel().getSelectedItem();
     }
 
+    @FXML
     public void handleWithdraw() {
         model.withdraw(getSelectedWithdraw());
     }
 
+    @FXML
     public void handleEnrol() {
         model.enrol(getSelectedActivity());
         subjectsTv.getSelectionModel().clearSelection();
     }
 
+    @FXML
     public void handleLogout() {
         stage.close();
     }
