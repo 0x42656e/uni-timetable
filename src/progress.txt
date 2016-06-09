@@ -62,11 +62,11 @@ Click "Login"
 [y] The subjects ComboBox is shown and it displays the subjects from the model (i.e. "48024 Applications Programming" and "31284 Web Services Development")
 [y] The subject activities table is empty and shows column headings: Subject, Group, Activity, Day, Start, Duration, Room, Capacity, Enrolled.
 [y] The layout arranges the header, content and footer sections vertically
-[?] The "Logged in as ..." heading is in the top left, and the student details GridPane is in the top right
-[?] The "My Activities" heading is aligned left, and the "Withdraw" button is aligned right
-[?] The "Enrol into subject" heading and ComboBox are aligned left, and the "Enrol" button is aligned right
-[?] All colours and fonts are correct
-[?] The spacing and padding look like the screenshots
+[y] The "Logged in as ..." heading is in the top left, and the student details GridPane is in the top right
+[y] The "My Activities" heading is aligned left, and the "Withdraw" button is aligned right
+[y] The "Enrol into subject" heading and ComboBox are aligned left, and the "Enrol" button is aligned right
+[y] All colours and fonts are correct
+[y] The spacing and padding look like the screenshots
 Select "48024 Applications Programming" from the subjects ComboBox
 [y] The Subject column shows the correct subject number (and ONLY the subject number) of each activity in the selected subject
 [y] The Group, Activity, Day, Start, Duration, Room, Capacity and Enrolled columns show the corresponding properties from the Activity model data for each activity in the subject

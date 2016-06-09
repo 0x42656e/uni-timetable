@@ -4,7 +4,12 @@
 
 .heading {
     -fx-background-color: #0099cc;
-    -fx-padding: 50px;
+    -fx-padding: 40px;
+}
+
+.headingStudent {
+    -fx-background-color: #0099cc;
+    -fx-padding: 20px;
 }
 
 .title {

@@ -29,12 +29,13 @@ public class Add_StudentController extends Controller<University> {
 
     @FXML
     public void handleAdd() throws Exception {
-        if (model.isStudent(numberTf.getText())) {
-            errorLb.setVisible(true);
-            return;
+        try {
+                getUniversity().addStudent(numberTf.getText(), nameTf.getText(), attendanceTg.getSelectedToggle().getUserData().toString(), scholarshipCb.isSelected());
+                stage.close();
+            }
+         catch (Exception e) {
+            errorLb.setText(e.getLocalizedMessage());
         }
-        getUniversity().addStudent(numberTf.getText(), nameTf.getText(), attendanceTg.getSelectedToggle().getUserData().toString(), scholarshipCb.isSelected());
-        stage.close();
     }
 
     @FXML

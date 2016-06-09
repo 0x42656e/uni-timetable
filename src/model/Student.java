@@ -27,7 +27,10 @@ public class Student {
     public String getNumber() { return number; }
     public String getName() { return name; }
     public String getNameTitle() { return "Logged in as " + name; }
-    public String getAttendance() { return attendance; }
+    public String getAttendance() {
+            if (attendance.contains("pt")) return "Part Time";
+            return "Full Time";
+        }
     public String getScholarship() {
         if (scholarship) return "Yes";
         return "No";

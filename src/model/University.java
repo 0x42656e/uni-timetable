@@ -34,6 +34,7 @@ public class University {
     }
 
     public void addStudent(String number, String name, String attendance, boolean scholarship) throws Exception {
+        if (this.isStudent(number)) throw new Exception("Student already exists");
         students.add(new Student(this, number, name, attendance, scholarship));
     }
 

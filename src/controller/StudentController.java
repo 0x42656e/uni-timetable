@@ -23,7 +23,7 @@ public class StudentController extends Controller<Student> {
     @FXML Button enrolBtn;
     @FXML Button logoutBtn;
 
-    @FXML ComboBox subjectCb;
+    @FXML ComboBox<Subject> subjectCb;
 
     @FXML TableView<Activity> studentsTv;
     @FXML TableView<Activity> subjectsTv;
@@ -70,13 +70,17 @@ public class StudentController extends Controller<Student> {
         subCapacityClm.setCellValueFactory(cellData -> cellData.getValue().capacityProperty().asString());
         subEnrolledClm.setCellValueFactory(cellData -> cellData.getValue().enrolledProperty().asString());
 
-        subjectCb.getSelectionModel().selectedItemProperty().addListener(new ChangeListener() {
-            @Override
-            public void changed(ObservableValue observable, Object oldValue, Object newValue) {
+        //*** OLD METHOD ***//
+        //subjectCb.getSelectionModel().selectedItemProperty().addListener(new ChangeListener() {
+        //    @Override
+        //    public void changed(ObservableValue observable, Object oldValue, Object newValue) {
 
-                subjectsTv.setItems(getSubjectList(newValue).getActivities());
-            }
-        });
+        //        subjectsTv.setItems(getSubjectList(newValue).getActivities());
+        //    }
+        //});
+
+        subjectCb.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> subjectsTv.setItems(newValue.getActivities()));
+
         studentsTv.setItems(model.getActivities());
 
 
@@ -91,12 +95,13 @@ public class StudentController extends Controller<Student> {
 
     }
 
-    private Subject getSubjectList(Object value) {
-        for (Subject x : getStudent().getUniversity().getSubjects()) {
-            if (x == value) return x;
-        }
-        return null;
-    }
+    //*** OLD METHOD ***//
+    //private Subject getSubjectList(Object value) {
+    //    for (Subject x : getStudent().getUniversity().getSubjects()) {
+    //        if (x == value) return x;
+    //    }
+    //    return null;
+    //}
 
     private Activity getSelectedWithdraw() {
         return studentsTv.getSelectionModel().getSelectedItem();

@@ -15,7 +15,7 @@
     <HBox alignment="center" spacing="10"  styleClass="heading">
     <ImageView>
         <image>
-            <Image url="/res/logo.png"/>
+            <Image url="/view/res/logo.png"/>
         </image>
     </ImageView>
         <Label text="Timetable System" styleClass="title"/>
