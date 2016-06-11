@@ -1,0 +1,2 @@
+Main-Class: University
+Comment: jar cfm toPLATE.jar mainifest.txt University.class University.java Student.class Student.java Subject.class Subject.java Activity.class Activity.java In.class In.java
